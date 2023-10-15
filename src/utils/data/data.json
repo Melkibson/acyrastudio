@@ -1,0 +1,110 @@
+{
+    "header" : {
+        "titleSrc" : "acyra.svg",
+        "subtitle" : "studio"
+    },
+    "nav" : [
+        {
+            "name": "Services",
+            "link": "#service"
+        },
+        {
+            "name": "Prix",
+            "link": "#price"
+        },
+        {
+            "name": "Réserver",
+            "link": "#book"
+        }, {
+            "name": "FAQ",
+            "link": "#faq"
+        }
+    ],
+    "service" : 
+    [
+        {
+            "featuredImage" : "micro.jpg",
+            "titleUp" : "Enregistrement",
+            "titleDown" : "Production",
+            "content": "Chez Acyra Studio, nous vous proposons un service d'enregistrement et de production de qualité. Nous vous accompagnons dans la réalisation de vos projets musicaux, de la composition à la production, en passant par l'enregistrement et le mixage."
+        },
+        {
+            "featuredImage" : "studio.jpg",
+            "titleUp" : "Tournage",
+            "titleDown" : "Réalisation",
+            "content": "Acyra Studio vous propose un service de tournage et de réalisation de clips de qualité. Nous vous accompagnons dans la réalisation de vos projets audiovisuels, de la conception à la réalisation, en passant par le tournage et le montage."
+        }
+    ],
+    "card" : [
+        {
+            "title" : "Siver Package",
+            "price" : "170",
+            "content" : [
+                "Une séance 'enregistrement de 4h",
+                "Mixage et mastering",
+                "Visuels pour les réseaux sociaux"
+            ]
+        },
+        {
+            "title" : "Gold Package",
+            "price" : "300",
+            "content" : [
+                "Une séance 'enregistrement de 4h",
+                "Mixage et mastering",
+                "Visuels pour les réseaux sociaux",
+                "Un clip vidéo avec 3 jours de tournage"
+            ]
+        },
+        {
+            "title" : "Platinium Package",
+            "price" : "500",
+            "content" : [
+                "Une séance 'enregistrement de 8h",
+                "Mixage et mastering",
+                "Visuels pour les réseaux sociaux",
+                "Un clip vidéo avec 6 jours de tournage"
+            ]
+        },{
+            "nightly" : "Les séances nocturnes sont facturées 20€ de l'heure en plus."
+        }
+       
+    ],
+    "faq" : {
+        "title" : "FAQ",
+        "content" : [
+            {
+                "question" : "Quels services offrez vous ?",
+                "answer" : "On propose des services d'enregistrement, de production, de tournage et de réalisation de vidéos clips ou promotionnels."
+            },
+            {
+                "question" : "Quels sont les horaires d'ouverture ?",
+                "answer" : "Nous sommes ouverts tous les jours de la semaine 7/7 24H"
+            },
+            {
+                "question" : "Comment je reserve une séance ?",
+                "answer" : "Vous pouvez réserver une séance en nous contactant par instagram ou par téléphone."
+            },
+            {
+                "question" : "Est-ce que je peux apporter mon propre instrument ?",
+                "answer" : "Vous pouvez tout à fait apporter votre propre instrument."
+            } 
+            
+        ]
+    },
+    "book": {
+        "title": "Réserver maintenant",
+        "button": [
+            {
+                "label": "instagram",
+                "link": "https://www.instagram.com/le_huss"
+            },
+            {
+                "label": "téléphone",
+                "link": "0768978143"
+            }
+        ]
+    },
+    "footer": {
+        "content": "© 2023 Acyra Studio. Tous droits réservés."
+    }
+}
