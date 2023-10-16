@@ -45,7 +45,7 @@ const Button = styled.button`
     background-color: ${({ theme }) => theme.colors.acyraBlack};
     color: ${({ theme }) => theme.colors.acyraWhite};
     border: none;
-    border-radius: 1rem;
+    border-radius: 1.25rem;
     width: 100%;
     height: 52px;
     font-size: 1.5;
