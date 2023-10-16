@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const QuestionContainer = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
