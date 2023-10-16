@@ -50,6 +50,7 @@ const Button = styled.button`
     height: 52px;
     font-size: 1.5;
     font-weight: 600;
+    cursor: pointer;
 
 `
 const CardListText = styled.span`
