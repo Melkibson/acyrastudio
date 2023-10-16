@@ -10,7 +10,7 @@ export const theme = {
     padding: {
         mobile: 'padding: 0 3rem;',
         desktop: 'padding: 0 10rem;',
-        desktopLarge: 'padding: 0 20rem;',
+        desktopLarge: 'padding: 0 15rem;',
         
     },
     breakpoints: {
@@ -18,7 +18,7 @@ export const theme = {
         mobile: 'min-width: 576px',
         tablet: 'min-width: 768px',
         desktop: 'min-width: 1200px',
-        desktopLarge: 'min-width: 1400px',
+        desktopLarge: 'min-width: 1660px',
     },
     font: {
         primary: '"Inter", sans-serif;',

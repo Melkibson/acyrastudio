@@ -14,7 +14,7 @@ const CardContainer = styled.div`
     padding: 2rem;
 
     @media screen and (${({ theme }) => theme.breakpoints.desktopLarge}) {
-        width: 500px;
+        width: 320px;
     }
 `;
 
