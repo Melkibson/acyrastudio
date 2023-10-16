@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
+    position: relative;
     padding: 0 1rem;
     height: 100vh;
-    max-width: 100%;
+    max-width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;

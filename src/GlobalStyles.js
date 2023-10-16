@@ -1,10 +1,10 @@
 import { createGlobalStyle } from "styled-components";
-import { theme } from "./utils/theme";
 import Grotesk from "./assets/fonts/grotesk/grotesk.otf";
 import GroteskBold from "./assets/fonts/grotesk/grotesk-bold.otf";
+import FascinateInline from "./assets/fonts/fascinate/FascinateInline-Regular.ttf";
 
 export const GlobalStyles = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Fascinate+Inline&family=Inter:wght@500;700&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Fascinate+Inline&family=Inter:wght@500;700&display=swap');
 
     @font-face {
@@ -15,7 +15,54 @@ export const GlobalStyles = createGlobalStyle`
       font-family: "Grotesk Bold";
       src:url(${GroteskBold});
     }
+    @font-face {
+      font-family: "Fascinate Inline";
+      src:url(${FascinateInline});
+    }
 
+    html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
   body {
     background: ${({ theme }) => theme.colors.acyraBlack};
     color: ${({ theme }) => theme.colors.acyraWhite};
@@ -24,9 +71,11 @@ export const GlobalStyles = createGlobalStyle`
 
   body, #root {
     width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6, p, ul {
     padding: 0;
     margin: 0;
   }
@@ -35,7 +84,6 @@ export const GlobalStyles = createGlobalStyle`
     text-decoration: none;
     color: inherit;
   }
-
   
   `
 

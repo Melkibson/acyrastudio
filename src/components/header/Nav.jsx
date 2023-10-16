@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useState, useEffect } from 'react';
-import axios from 'axios';
 import data from '../../utils/data/data.json';
-
+import { handleOnclick } from '../../utils/scrollToView';
 
 const Container = styled.nav`
     display: flex;
@@ -26,13 +24,12 @@ const Link = styled.a`
         color: ${({ theme }) => theme.colors.acyraRed};
     }
 `
-const Nav = () => {
 
-    
+const Nav = () => {    
     return(
         <Container>
         {data?.nav.map((item, index) => (
-            <Link key={index} href={item.link}>{item.name}</Link>
+            <Link key={index} onClick={() => {handleOnclick(item.link)}}>{item.name}</Link>
         )
         )}
         </Container>

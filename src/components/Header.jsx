@@ -1,7 +1,5 @@
 import styled from "styled-components";
 import Nav from "./header/Nav";
-import data from "../utils/data/data.json";
-import FeaturedImage from "./services/Image";
 import Title from "./header/heroTitle/Title";
 import Subtitle from "./header/heroTitle/Subtitle";
 
@@ -11,12 +9,16 @@ const Container = styled.header`
     justify-content: center;
     align-items: center;
     gap: 5rem;
-    height: 100vh;
-    width: 100vh;
-`
+    width: 100vw;
+    padding: 5rem;
+    @media screen and (${({ theme }) => theme.breakpoints.mobile}) {
+      padding: 8.5rem;
+      max-height: 100vh;
+    }
+    `
 const Header = ({image, title}) => {
    return (
-        <Container>
+        <Container id="home">
             <Nav/>
             <Title image={image}/>
             <Subtitle title={title}/>

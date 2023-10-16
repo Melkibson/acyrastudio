@@ -2,10 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Img = styled.img`
-    width: 40vh;
+    width: calc(100% - 5rem);
     height: auto;
     @media screen and (${({ theme }) => theme.breakpoints.mobile}) {
-        width: 100%;
     }
 `
 
