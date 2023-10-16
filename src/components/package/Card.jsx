@@ -67,7 +67,7 @@ const Card = ({title, price, content,}) => {
                         <CardListItem key={index}><AiOutlineCheck/><CardListText>{item}</CardListText></CardListItem>
                     ))}
                 </CardList>
-                <Button>Book now</Button>
+                <Button>Réservez</Button>
         </CardContainer>
     );
 };
