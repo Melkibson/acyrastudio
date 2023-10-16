@@ -3,15 +3,36 @@ import { GlobalStyles } from './GlobalStyles'
 import { theme } from './utils/theme'
 import { Wrapper } from './components/Wrapper'
 import Header from './components/Header'
-import data from "./utils/data/data.json";
 import Services from './components/Services'
 import Package from './components/Package'
 import FAQ from './components/FAQ'
 import Book from './components/Book'
 import Footer from './components/Footer'
 import GoBackUpBtn from './utils/GoBackUpBtn'
+import axios from 'axios';
+import { useState, useEffect } from 'react';
+//import data from './utils/data/data.json'
+
+
 
 function App() {
+const [data, setData] = useState({});
+
+  const fetchData = async () => {
+    axios.get('data.json')
+    .then((response) => {
+      setData(response.data);
+      return data
+    })
+  }
+
+
+  useEffect(() => {
+    fetchData();
+  }, [newData]);
+  
+    
+    console.log(newData);
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {AiOutlineCheck} from 'react-icons/ai'
 import { handleOnclick } from '../../utils/scrollToView';
+import { theme } from '../../utils/theme';
 
 const CardContainer = styled.div`
     display: flex;
@@ -60,8 +61,9 @@ const CardListText = styled.span`
 
 
 const Card = ({title, price, content,}) => {
+    const card = document.getElementById("cardPrice");
     return (
-        <CardContainer>
+        <CardContainer id="cardPrice">
            <CardTitle>{title}</CardTitle>
              <CardPrice>{price}</CardPrice>
                 <CardList>
