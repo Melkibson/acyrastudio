@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {AiOutlineCheck} from 'react-icons/ai'
+import { handleOnclick } from '../../utils/scrollToView';
 
 const CardContainer = styled.div`
     display: flex;
@@ -67,7 +68,7 @@ const Card = ({title, price, content,}) => {
                         <CardListItem key={index}><AiOutlineCheck/><CardListText>{item}</CardListText></CardListItem>
                     ))}
                 </CardList>
-                <Button>Réservez</Button>
+                <Button onClick={() => {handleOnclick("book")}}>Réservez</Button>
         </CardContainer>
     );
 };
