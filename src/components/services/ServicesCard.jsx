@@ -2,13 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import H2Title from './Title';
 import FeaturedImage from './FeaturedImage';
-import data from '../../utils/data/data.json';
 import Content from './Content';
+
+const Description = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+`
 
 const ServicesContainer = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 
     @media screen and (${({ theme }) => theme.breakpoints.desktop}) {
@@ -16,19 +21,18 @@ const ServicesContainer = styled.div`
         gap: 5rem;
         &:last-child {
             flex-direction: row;
-            text-align: right;
+            align-items: center;
+            ${Description} {
+                text-align: right;
+
+            }
         }
 
     }
 
 `
 
-const Description = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-`
+
 
 
 function ServicesCard({featuredImage, titleUp, titleDown, content}) {

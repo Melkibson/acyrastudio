@@ -2,19 +2,21 @@ import { useState, useEffect } from 'react'
 
 export const useGetData = (apiRoute) => {
 
-  const [data, setData] = useState({})
+  const [data, setData] = useState(null)
 
+  const fetchData = async () => {
+    await axios.get(apiRoute)
+    .then(res => {
+      setData(res.data)
+    }).catch(err => {
+      console.log(err)
+    })
+  }
   useEffect(() => {
-    const getData = async () => {
-        const response = await fetch(apiRoute);
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        const json = await response.json();
-        setData(json);
-    }
-    getData()
-  }, [apiRoute])
+    fetchData()
+  }, [])
 
+  if(!data) 
+    return null
   return data
 }

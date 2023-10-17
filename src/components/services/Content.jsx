@@ -13,6 +13,7 @@ const Description = styled.p`
     @media screen and (${({ theme }) => theme.breakpoints.mobile}) {
         font-size: 1.5rem;
     }
+
 `
 
 const Content = ({content}) => {

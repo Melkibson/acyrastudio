@@ -6,7 +6,6 @@ import ServicesCard from './services/ServicesCard';
 const Container = styled.div`
     width: 100%;
     height: auto;
-    padding: 5rem 0;
 `;
 function Services() {
 

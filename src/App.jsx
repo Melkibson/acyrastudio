@@ -1,7 +1,8 @@
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyles } from './GlobalStyles'
 import { theme } from './utils/theme'
-import { Wrapper } from './components/Wrapper'
+
+import { Wrapper} from './components/Wrapper'
 import Header from './components/Header'
 import Services from './components/Services'
 import Package from './components/Package'
@@ -10,29 +11,34 @@ import Book from './components/Book'
 import Footer from './components/Footer'
 import GoBackUpBtn from './utils/GoBackUpBtn'
 import { useGetData } from './hooks/useGetData'
-import data from './utils/data/data.json'
-import { useState } from 'react'
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+
 
 
 function App() {
-  const jsonData = useGetData('http://localhost:5173/data.json')
-  const [newData, setNewData] = useState({})
+  const [data, setData] = useState(null)
 
+  const fetchData = async () => {
+    await axios.get('http://localhost:5173/data.json')
+    .then(res => {
+      setData(res.data)
+    }).catch(err => {
+      console.log(err)
+    })
+  }
   useEffect(() => {
-    if (newData === undefined || Object.entries(newData).length === 0) {
-      setNewData(jsonData)
-    }
+    fetchData()
   }, [])
-
-  console.log(newData)
+  
+  if(!data) return null
 
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Wrapper>
         <Header 
-          image={data?.header.titleSrc}
+          image={data.header.titleSrc}
           title={data.header.subtitle}
           />
           <Services/>
