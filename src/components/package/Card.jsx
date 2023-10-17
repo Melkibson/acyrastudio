@@ -6,7 +6,7 @@ import CardHeading from './CardHeading';
 
 const CardContainer = styled.div`
     display: flex;
-    height: 400px;
+    height: 460px;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
@@ -14,29 +14,21 @@ const CardContainer = styled.div`
     background-color: ${({ theme }) => theme.colors.acyraLightRed};
     border-radius: 1.5rem;
     padding: 2rem;
-
+    &:hover {
+        transform: scale(1.1);
+        transition: all 0.2s ease-in;
+    }
     @media screen and (${({ theme }) => theme.breakpoints.desktopLarge}) {
         width: 320px;
     }
 `;
 
-const CardTitle = styled.p`
-    font-size: 1.5;
-    font-weight: 600;
-`
-
-const CardPrice = styled.p`
-    font-family: ${({ theme }) => theme.font.secondaryBold};
-    font-size: 5rem;
-    color: ${({ theme }) => theme.colors.acyraBlack};
-    margin: 1rem 0;
-`
 const CardList = styled.ul`
     list-style: none;
     
 `
 const CardListItem = styled.li`
-    font-size: 1.5;
+    font-size: 1rem;
     font-weight: 600;
     margin-bottom: 1rem;
     font-weight: 400;
@@ -50,10 +42,16 @@ const Button = styled.button`
     border: none;
     border-radius: 1.25rem;
     width: 100%;
-    height: 52px;
+    min-height: 52px;
     font-size: 1.5;
     font-weight: 600;
+    align-self: center;
     cursor: pointer;
+    &:hover {
+        width: calc(100% - 3rem);
+        transition: all 0.2s ease-in;
+
+    }
 
 `
 const CardListText = styled.div`
@@ -76,12 +74,12 @@ const Card = ({title, price, content,}) => {
                 title={title}
                 price={price}
            /> 
-                <CardList>
-                    {content.map((item, index) => (
-                        <CardListItem key={index}><IconContainer><AiOutlineCheck/></IconContainer><CardListText>{item}</CardListText></CardListItem>
-                    ))}
-                </CardList>
-                <Button onClick={() => {handleOnclick("book")}}>Réservez</Button>
+            <CardList>
+                {content.map((item, index) => (
+                    <CardListItem key={index}><IconContainer><AiOutlineCheck/></IconContainer><CardListText>{item}</CardListText></CardListItem>
+                ))}
+            </CardList>
+            <Button onClick={() => {handleOnclick("book")}}>Réservez</Button>
         </CardContainer>
     );
 };

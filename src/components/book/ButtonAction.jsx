@@ -20,7 +20,7 @@ const Link = styled.a`
     background-color: ${props => props.$isTel ? ({ theme }) => theme.colors.acyraLightBlack : ({ theme }) => theme.colors.acyraRed};
     color: ${props => props.$isTel ? ({ theme }) => theme.colors.acyraLightRed : ({ theme }) => theme.colors.acyraWhite};
     cursor: pointer;
-    padding: 1rem;
+    padding: 1.75rem 1.5rem;
     border-radius: 1rem;
     &:hover { 
         transform: scale(1.1);
