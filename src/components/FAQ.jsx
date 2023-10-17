@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Title from './faq/Title';
-import Question from './faq/questions/Questions';
+import Question from './faq/Questions';
 
 const Container = styled.div`
     max-width: 100%;

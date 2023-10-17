@@ -7,6 +7,8 @@ const QuestionContainer = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    line-height: 1.5;
     gap: 1rem;
     width: 100%;
 `;
