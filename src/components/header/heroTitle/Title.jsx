@@ -8,6 +8,7 @@ const Img = styled.img`
 
 const Container = styled.div`
     width: 100%;
+    max-width: 1700px;
     height: auto;
     display: flex;
     justify-content: center;

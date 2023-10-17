@@ -10,14 +10,17 @@ export const GlobalStyles = createGlobalStyle`
     @font-face {
       font-family: Grotesk;
       src:url(${Grotesk});
+      font-display: fallback;
     }
     @font-face {
       font-family: "Grotesk Bold";
       src:url(${GroteskBold});
+      font-display: fallback;
     }
     @font-face {
       font-family: "Fascinate Inline";
       src:url(${FascinateInline});
+      font-display: fallback;
     }
 
     html, body, div, span, applet, object, iframe,

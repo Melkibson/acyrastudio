@@ -23,7 +23,7 @@ const Button = styled.button`
 
 const GoBackUpBtn = () => {
   return (
-    <Button onClick={() => {handleOnclick("home")}}><BsArrowUpCircle size={"30"}/></Button>
+    <Button aria-label="Remonter" onClick={() => {handleOnclick("home")}}><BsArrowUpCircle size={"30"}/></Button>
   );
 };
 
