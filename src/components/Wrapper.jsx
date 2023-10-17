@@ -8,10 +8,13 @@ export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-x: hidden;
+    overflow: auto;
 
     @media screen and (${props => props.theme.breakpoints.mobile}) {
         ${props => props.theme.padding.mobile}
+    }
+    @media screen and (${props => props.theme.breakpoints.tablet}) {
+        ${props => props.theme.padding.tablet}
     }
     @media screen and (${props => props.theme.breakpoints.desktop}) {
         ${props => props.theme.padding.desktop}

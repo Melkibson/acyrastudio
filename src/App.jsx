@@ -9,16 +9,30 @@ import FAQ from './components/FAQ'
 import Book from './components/Book'
 import Footer from './components/Footer'
 import GoBackUpBtn from './utils/GoBackUpBtn'
+import { useGetData } from './hooks/useGetData'
 import data from './utils/data/data.json'
+import { useState } from 'react'
+import { useEffect } from 'react'
+
 
 function App() {
-    
+  const jsonData = useGetData('http://localhost:5173/data.json')
+  const [newData, setNewData] = useState({})
+
+  useEffect(() => {
+    if (newData === undefined || Object.entries(newData).length === 0) {
+      setNewData(jsonData)
+    }
+  }, [])
+
+  console.log(newData)
+
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Wrapper>
         <Header 
-          image={data.header.titleSrc}
+          image={data?.header.titleSrc}
           title={data.header.subtitle}
           />
           <Services/>

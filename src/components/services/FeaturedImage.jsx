@@ -6,7 +6,7 @@ const Container = styled.div`
     min-width: 300px;
     height: auto;
     padding: 2rem 0;
-    @media screen and (${({ theme }) => theme.breakpoints.mobile}) {
+    @media screen and (${({ theme }) => theme.breakpoints.desktop}) {
       width: 45%;
        
     }

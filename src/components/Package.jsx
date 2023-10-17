@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Card from './package/Card';
 import Title from './faq/Title';
+import HeadingDescription from './package/HeadingDescription';
 
 const CardRow = styled.div`
     display: flex;
@@ -34,21 +35,12 @@ const DescriptionEmphasis = styled.span`
        color : ${({ theme }) => theme.colors.acyraLightRed};
        font-weight: 700;
        margin-left: 0.5rem;
-
-
-
 `
 const Package = ({cards, description, title}) => {
     return (
     <div id="price">  
         <Title title={title}/>
-        <ContainerDescription>
-            <Description>{description.tailored}<DescriptionEmphasis>{description.emphasis[0]}</DescriptionEmphasis></Description>
-            <Description>{description.catalog}<DescriptionEmphasis>{description.emphasis[1]}</DescriptionEmphasis></Description>
-            <Description>{description.license}<DescriptionEmphasis>{description.emphasis[2]}</DescriptionEmphasis></Description>
-            <Description>{description.nightly}</Description>
-
-        </ContainerDescription>    
+        <HeadingDescription description={description}/>    
         <CardRow>
         {cards.map((card, index) => (
             <Card 

@@ -12,6 +12,7 @@ export const theme = {
     },
         padding: {
         mobile: 'padding: 0 3rem;',
+        tablet: 'padding: 0 6rem;',
         desktop: 'padding: 0 10rem;',
         desktopLarge: 'padding: 0 15rem;',
         

@@ -8,6 +8,7 @@ const Description = styled.p`
     font-family: ${({ theme }) => theme.font.primary};
     text-align: left;
     line-height: 1.2;
+    padding: 1.25rem 0;
    
     @media screen and (${({ theme }) => theme.breakpoints.mobile}) {
         font-size: 1.5rem;

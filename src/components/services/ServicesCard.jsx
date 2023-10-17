@@ -8,10 +8,10 @@ import Content from './Content';
 const ServicesContainer = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
-    @media screen and (${({ theme }) => theme.breakpoints.mobile}) {
+    @media screen and (${({ theme }) => theme.breakpoints.desktop}) {
         flex-direction: row-reverse;
         gap: 5rem;
         &:last-child {

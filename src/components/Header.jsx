@@ -10,7 +10,7 @@ const Container = styled.header`
     align-items: center;
     gap: 5rem;
     width: 100vw;
-    padding: 5rem;
+    padding: 5rem 2rem;
     @media screen and (${({ theme }) => theme.breakpoints.mobile}) {
       padding: 8.5rem;
       max-height: 100vh;
