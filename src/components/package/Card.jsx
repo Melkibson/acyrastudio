@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {AiOutlineCheck} from 'react-icons/ai'
 import { handleOnclick } from '../../utils/scrollToView';
-import { theme } from '../../utils/theme';
+import CardHeading from './CardHeading';
 
 const CardContainer = styled.div`
     display: flex;
@@ -26,10 +26,10 @@ const CardTitle = styled.p`
 `
 
 const CardPrice = styled.p`
-    font-family: ${({ theme }) => theme.font.price};
+    font-family: ${({ theme }) => theme.font.secondaryBold};
     font-size: 5rem;
     color: ${({ theme }) => theme.colors.acyraBlack};
-    margin-bottom: 1rem;
+    margin: 1rem 0;
 `
 const CardList = styled.ul`
     list-style: none;
@@ -39,6 +39,8 @@ const CardListItem = styled.li`
     font-size: 1.5;
     font-weight: 600;
     margin-bottom: 1rem;
+    font-weight: 400;
+    display: flex;
 
 `
 
@@ -54,21 +56,29 @@ const Button = styled.button`
     cursor: pointer;
 
 `
-const CardListText = styled.span`
+const CardListText = styled.div`
     margin-left: 1rem;
 
 `
-
+const IconContainer = styled.div`
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+    height: 100%
+`
 
 const Card = ({title, price, content,}) => {
     const card = document.getElementById("cardPrice");
     return (
         <CardContainer id="cardPrice">
-           <CardTitle>{title}</CardTitle>
-             <CardPrice>{price}</CardPrice>
+           <CardHeading
+                title={title}
+                price={price}
+           /> 
                 <CardList>
                     {content.map((item, index) => (
-                        <CardListItem key={index}><AiOutlineCheck/><CardListText>{item}</CardListText></CardListItem>
+                        <CardListItem key={index}><IconContainer><AiOutlineCheck/></IconContainer><CardListText>{item}</CardListText></CardListItem>
                     ))}
                 </CardList>
                 <Button onClick={() => {handleOnclick("book")}}>Réservez</Button>
