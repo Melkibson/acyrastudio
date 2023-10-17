@@ -18,9 +18,8 @@ import axios from 'axios'
 
 function App() {
   const [data, setData] = useState(null)
-
   const fetchData = async () => {
-    await axios.get('http://localhost:5173/data.json')
+    await axios.get(`${window.location.href}data.json`)
     .then(res => {
       setData(res.data)
     }).catch(err => {
@@ -30,7 +29,7 @@ function App() {
   useEffect(() => {
     fetchData()
   }, [])
-  
+  console.log(window.location.href)
   if(!data) return null
 
   return (
