@@ -5,6 +5,7 @@ const CardContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    color: ${({ theme }) => theme.colors.acyraBlack};
 `
 
 const CardTitle = styled.p`
@@ -15,7 +16,6 @@ const CardTitle = styled.p`
 const CardPrice = styled.p`
     font-family: ${({ theme }) => theme.font.secondaryBold};
     font-size: 5rem;
-    color: ${({ theme }) => theme.colors.acyraBlack};
 `
 
 const CardHeading = ({ title, price }) => {

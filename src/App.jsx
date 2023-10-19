@@ -10,11 +10,8 @@ import FAQ from './components/FAQ'
 import Book from './components/Book'
 import Footer from './components/Footer'
 import GoBackUpBtn from './utils/GoBackUpBtn'
-import { useGetData } from './hooks/useGetData'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-
-
 
 function App() {
   const [data, setData] = useState(null)
@@ -39,6 +36,7 @@ function App() {
         <Header 
           image={data.header.titleSrc}
           title={data.header.subtitle}
+          videoSrc="vinyl.mp4"
           />
           <Services/>
           <Package 
@@ -62,8 +60,6 @@ function App() {
             <GoBackUpBtn/> 
       </Wrapper>
     </ThemeProvider>
-
-      
   )
 }
 

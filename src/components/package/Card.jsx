@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import {AiOutlineCheck} from 'react-icons/ai'
+import {AiOutlineCheckCircle} from 'react-icons/ai'
+import { IconContext } from "react-icons";
 import { handleOnclick } from '../../utils/scrollToView';
 import CardHeading from './CardHeading';
 
@@ -11,12 +12,18 @@ const CardContainer = styled.div`
     justify-content: space-between;
     align-items: flex-start;
     max-width: 100%;
-    background-color: ${({ theme }) => theme.colors.acyraLightRed};
+    ${({ theme }) => theme.colors.cardGradientGold};
     border-radius: 1.5rem;
     padding: 2rem;
-    &:hover {
+    &:first-child {
+        ${({ theme }) => theme.colors.cardGradientSilver};
+    }
+    &:last-child {
+        ${({ theme }) => theme.colors.cardGradientPlatine};
+
+    }
+    &:nth-child(2){
         transform: scale(1.1);
-        transition: all 0.2s ease-in;
     }
     @media screen and (${({ theme }) => theme.breakpoints.desktopLarge}) {
         width: 320px;
@@ -25,13 +32,13 @@ const CardContainer = styled.div`
 
 const CardList = styled.ul`
     list-style: none;
+    color: ${({ theme }) => theme.colors.acyraBlack};
     
 `
 const CardListItem = styled.li`
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    font-weight: 400;
     display: flex;
 
 `
@@ -76,7 +83,12 @@ const Card = ({title, price, content,}) => {
            /> 
             <CardList>
                 {content.map((item, index) => (
-                    <CardListItem key={index}><IconContainer><AiOutlineCheck/></IconContainer><CardListText>{item}</CardListText></CardListItem>
+                    <CardListItem key={index}>
+                        <IconContainer>
+                            <AiOutlineCheckCircle size={20}/>
+                        </IconContainer>
+                        <CardListText>{item}</CardListText>
+                    </CardListItem>
                 ))}
             </CardList>
             <Button onClick={() => {handleOnclick("book")}}>Réservez</Button>
