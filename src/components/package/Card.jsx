@@ -1,9 +1,9 @@
-import React from 'react';
 import styled from 'styled-components';
 import {AiOutlineCheckCircle} from 'react-icons/ai'
-import { IconContext } from "react-icons";
 import { handleOnclick } from '../../utils/scrollToView';
 import CardHeading from './CardHeading';
+
+import PropTypes from "prop-types";
 
 const CardContainer = styled.div`
     display: flex;
@@ -74,7 +74,6 @@ const IconContainer = styled.div`
 `
 
 const Card = ({title, price, content,}) => {
-    const card = document.getElementById("cardPrice");
     return (
         <CardContainer id="cardPrice">
            <CardHeading
@@ -94,6 +93,12 @@ const Card = ({title, price, content,}) => {
             <Button onClick={() => {handleOnclick("book")}}>Réservez</Button>
         </CardContainer>
     );
+};
+
+Card.propTypes = {
+  title: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  content: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default Card;

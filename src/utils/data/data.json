@@ -50,32 +50,28 @@
     "card" : [
         {
             "title" : "Siver Package",
-            "price" : "170",
+            "price" : "70",
             "content" : [
-                "Une séance d'enregistrement de 4h",
-                "Mixage et mastering",
-                "Visuels pour les réseaux sociaux"
+                "Une séance d'enregistrement de 2h",
+                "Sans mixage ni mastering"
             ]
         },
         {
             "title" : "Gold Package",
-            "price" : "300",
+            "price" : "150",
             "content" : [
-                "Une séance d'enregistrement de 4h",
-                "Mixage et mastering",
-                "Visuels pour les réseaux sociaux",
-                "Un clip vidéo avec 3 jours de tournage"
+                "Une séance d'enregistrement de 5h",
+                "Mixage inclus",
+                "Visuels pour les réseaux sociaux"
             ]
         },
         {
             "title" : "Platine Package",
-            "price" : "500",
+            "price" : "350",
             "content" : [
-                "Une séance d'enregistrement de 8h",
+                "Une séance d'enregistrement de 9h",
                 "Mixage et mastering",
                 "Visuels pour les réseaux sociaux",
-                "Production sur mesure",
-                "Un clip vidéo avec 3 jours de tournage"
             ]
         }
        
