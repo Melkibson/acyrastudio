@@ -27,13 +27,26 @@ const DescriptionEmphasis = styled.span`
 
 const HeadingDescription = ({description}) => {
     return (
-        <ContainerDescription>
-            <Description>{description.tailored}<DescriptionEmphasis>{description.emphasis[0]}</DescriptionEmphasis></Description>
-            <Description>{description.catalog}<DescriptionEmphasis>{description.emphasis[1]}</DescriptionEmphasis></Description>
-            <Description>{description.license}<DescriptionEmphasis>{description.emphasis[2]}</DescriptionEmphasis></Description>
-            <Description>{description.nightly}</Description>
-        </ContainerDescription>
-        )
+      <ContainerDescription>
+        <Description>
+          {description.tailored}
+          <DescriptionEmphasis>{description.emphasis[0]}</DescriptionEmphasis>
+        </Description>
+        <Description>
+          {description.catalog}
+          <DescriptionEmphasis>{description.emphasis[1]}</DescriptionEmphasis>
+        </Description>
+        <Description>
+          {description.license}
+          <DescriptionEmphasis>{description.emphasis[2]}</DescriptionEmphasis>
+        </Description>
+        <Description>{description.nightly}</Description>
+        <Description>
+          {description.video}
+          <DescriptionEmphasis>{description.emphasis[3]}</DescriptionEmphasis>
+        </Description>
+      </ContainerDescription>
+    );
 }
 
 HeadingDescription.propTypes = {
