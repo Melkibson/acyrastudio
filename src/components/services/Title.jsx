@@ -1,5 +1,5 @@
-import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Container = styled.div`
     display: flex;
@@ -26,5 +26,10 @@ const H2Title = ({titleUp, titleDown}) => {
         
     );
 };
+
+H2Title.propTypes = {
+    titleUp: PropTypes.string.isRequired,
+    titleDown: PropTypes.string.isRequired,
+}
 
 export default H2Title;

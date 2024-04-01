@@ -1,51 +1,36 @@
-import { ThemeProvider } from 'styled-components'
-import { GlobalStyles } from './GlobalStyles'
-import { theme } from './utils/theme'
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "./GlobalStyles";
+import { theme } from "./utils/theme";
+import data from "./utils/data/data.json";
 
-import { Wrapper} from './components/Wrapper'
-import Header from './components/Header'
-import Services from './components/Services'
-import Package from './components/Package'
-import FAQ from './components/FAQ'
-import Book from './components/Book'
-import Footer from './components/Footer'
-import GoBackUpBtn from './utils/GoBackUpBtn'
-import { useState, useEffect } from 'react'
-import axios from 'axios'
+import { Wrapper } from "./components/Wrapper";
+import Header from "./components/Header";
+import Services from "./components/Services";
+import Package from "./components/Package";
+import FAQ from "./components/FAQ";
+import Book from "./components/Book";
+import Footer from "./components/Footer";
+import GoBackUpBtn from "./utils/GoBackUpBtn";
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 function App() {
-  const [data, setData] = useState(null)
 
-    const [servicesRef, servicesInView] = useInView({
-      triggerOnce: true,
-    });
-    const [packageRef, packageInView] = useInView({
-      triggerOnce: true,
-    });
-    const [faqRef, faqInView] = useInView({
-      triggerOnce: true,
-    });
-    const [bookRef, bookInView] = useInView({
-      triggerOnce: true,
-    });
+  const [servicesRef, servicesInView] = useInView({
+    triggerOnce: true,
+  });
+  const [packageRef, packageInView] = useInView({
+    triggerOnce: true,
+  });
+  const [faqRef, faqInView] = useInView({
+    triggerOnce: true,
+  });
+  const [bookRef, bookInView] = useInView({
+    triggerOnce: true,
+  });
 
-
-  const fetchData = async () => {
-    await axios.get(`${window.location.href}data.json`)
-    .then(res => {
-      setData(res.data)
-    }).catch(err => {
-      console.log(err)
-    })
-  }
-  useEffect(() => {
-    fetchData()
-  }, [])
-  console.log(window.location.href)
-  if(!data) return null
+  if (!data) return null;
 
   return (
     <ThemeProvider theme={theme}>
@@ -114,4 +99,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
