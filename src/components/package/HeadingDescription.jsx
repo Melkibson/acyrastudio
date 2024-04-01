@@ -1,5 +1,5 @@
-import React from 'react';
 import styled from 'styled-components';
+import PropTypes from "prop-types";
 
 const ContainerDescription = styled.div`
     display: flex;
@@ -35,5 +35,9 @@ const HeadingDescription = ({description}) => {
         </ContainerDescription>
         )
 }
+
+HeadingDescription.propTypes = {
+  description: PropTypes.object.isRequired,
+};
 
 export default HeadingDescription;

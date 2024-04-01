@@ -1,5 +1,5 @@
-import React from 'react';
 import styled from 'styled-components';
+import PropTypes from "prop-types";
 import Card from './package/Card';
 import Title from './faq/Title';
 import HeadingDescription from './package/HeadingDescription';
@@ -39,5 +39,12 @@ const Package = ({cards, description, title}) => {
     </Container>
     );
 };
+
+Package.propTypes = {
+  description: PropTypes.object.isRequired,
+  cards: PropTypes.array.isRequired,
+  title: PropTypes.string.isRequired,
+};
+
 
 export default Package;

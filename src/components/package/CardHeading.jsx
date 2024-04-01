@@ -1,5 +1,5 @@
-import React from 'react';
 import styled from 'styled-components';
+import PropTypes from "prop-types";
 
 const CardContainer = styled.div`
     display: flex;
@@ -25,5 +25,11 @@ const CardHeading = ({ title, price }) => {
         <CardPrice>{price}</CardPrice>
     </CardContainer>
 )}
+
+CardHeading.propTypes = {
+  title: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+};
+
 
 export default CardHeading;

@@ -43,7 +43,7 @@
         "tailored": "Nous proposons également de la production sur mesure pour",
         "catalog": "Ainsi que la possibilité de choisir parmi notre catalogue de productions et de beats pour",
         "license": "Toutes nos licenses sont",
-        "emphasis":["150€", "60€", "exclusives", "50€", "(à partir de 00h"],
+        "emphasis":["150€", "60€", "exclusives", "50€", "à partir de 22h"],
         "nightly" : "Les séances nocturnes sont facturées 50€ de l'heure."
 
     }, 
@@ -71,7 +71,7 @@
             "content" : [
                 "Une séance d'enregistrement de 9h",
                 "Mixage et mastering",
-                "Visuels pour les réseaux sociaux",
+                "Visuels pour les réseaux sociaux"
             ]
         }
        
